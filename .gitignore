@@ -1,3 +1,4 @@
 node_modules
+dist
 src/css/*.css
 yarn-error.log
