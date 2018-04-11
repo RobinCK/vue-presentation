@@ -48,9 +48,12 @@ body {
 .reveal .user-info__position {
   font-size: 0.7em;
   font-weight: 200;
-  margin-bottom: 50px;
+}
+.reveal .user-info__position a {
+  color: #37485e;
 }
 .reveal .user-info__social {
+  margin-top: 50px;
   font-size: 0.4em;
 }
 .reveal .user-info__social a {
@@ -59,4 +62,18 @@ body {
 }
 .reveal .user-info__social a:hover {
   color: #ffffff;
+}
+.reveal .vue-logo__svg {
+  opacity: 0;
+  transition: opacity 1s 1s;
+}
+.reveal .vue-logo__title {
+  opacity: 0;
+  transition: opacity 1s 1.3s;
+}
+.reveal section.present .vue-logo__svg {
+  opacity: 1;
+}
+.reveal section.present .vue-logo__title {
+  opacity: 1;
 }
