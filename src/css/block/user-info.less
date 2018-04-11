@@ -1,0 +1,39 @@
+@import "../variables";
+
+.user-info {
+  &__photo {
+    box-shadow: none;
+    border: @photo-border-width @photo-border-style @photo-border-color;
+    max-width: @photo-width;
+    border-radius: @photo-border-radius;
+  }
+
+  &__name {
+    font-weight: bold;
+    font-size: 1em;
+  }
+
+  &__position {
+    font-size: 0.7em;
+    font-weight: 200;
+
+    a {
+      color: @link-color;
+    }
+  }
+
+  &__social {
+    margin-top: 50px;
+    font-size: 0.4em;
+
+    a {
+      color: @link-color;
+      padding: 0 10px;
+
+      &:hover {
+        color: #ffffff;
+      }
+    }
+  }
+}
+

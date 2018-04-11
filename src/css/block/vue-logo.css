@@ -1,0 +1,14 @@
+.vue-logo__svg {
+  opacity: 0;
+  transition: opacity 1s 1s;
+}
+.vue-logo__title {
+  opacity: 0;
+  transition: opacity 1s 1.3s;
+}
+section.present .vue-logo__svg {
+  opacity: 1;
+}
+section.present .vue-logo__title {
+  opacity: 1;
+}

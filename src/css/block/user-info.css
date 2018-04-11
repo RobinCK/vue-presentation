@@ -1,0 +1,28 @@
+.user-info__photo {
+  box-shadow: none;
+  border: 5px solid #ffffff;
+  max-width: 200px;
+  border-radius: 50%;
+}
+.user-info__name {
+  font-weight: bold;
+  font-size: 1em;
+}
+.user-info__position {
+  font-size: 0.7em;
+  font-weight: 200;
+}
+.user-info__position a {
+  color: #37485e;
+}
+.user-info__social {
+  margin-top: 50px;
+  font-size: 0.4em;
+}
+.user-info__social a {
+  color: #37485e;
+  padding: 0 10px;
+}
+.user-info__social a:hover {
+  color: #ffffff;
+}
