@@ -1,6 +1,5 @@
 const gulp = require('gulp');
 const dependencies = require('gulp-web-dependencies');
-const copy = require('gulp-copy');
 const less = require('gulp-less');
 const mergeStream = require('merge-stream');
 const path = require('path');
