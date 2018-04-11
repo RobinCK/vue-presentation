@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "deploy": "npm run build && gh-pages -d dist",
     "build": "gulp"
   },
   "author": "",
@@ -16,5 +17,8 @@
     "less": "^3.0.1",
     "merge-stream": "^1.0.1",
     "reveal.js": "^3.6.0"
+  },
+  "devDependencies": {
+    "gh-pages": "^1.1.0"
   }
 }
