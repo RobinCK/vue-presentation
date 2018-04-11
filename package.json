@@ -6,6 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "deploy": "npm run build && gh-pages -d dist",
+    "lint": "stylelint src/css/**/*.less -s less --color",
     "build": "gulp"
   },
   "author": "",
@@ -19,6 +20,8 @@
     "reveal.js": "^3.6.0"
   },
   "devDependencies": {
-    "gh-pages": "^1.1.0"
+    "gh-pages": "^1.1.0",
+    "stylelint": "^9.2.0",
+    "stylelint-config-standard": "^18.2.0"
   }
 }
