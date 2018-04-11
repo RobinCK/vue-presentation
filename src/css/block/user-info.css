@@ -1,6 +1,6 @@
 .user-info__photo {
   box-shadow: none;
-  border: 5px solid #ffffff;
+  border: 5px solid #fff;
   max-width: 200px;
   border-radius: 50%;
 }
@@ -24,5 +24,5 @@
   padding: 0 10px;
 }
 .user-info__social a:hover {
-  color: #ffffff;
+  color: #fff;
 }
