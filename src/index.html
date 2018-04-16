@@ -55,15 +55,74 @@
             <div class="history">
                 <h2>History</h2>
                 <ul>
-                    <li>Started in late 2013</li>
+                    <li class="fragment">Started in late 2013</li>
                     <li class="fragment">First release Feb. 2014 (v0.6)</li>
                     <li class="fragment">v1.0.0 Evangelion Oct. 2015</li>
                     <li class="fragment">Latest release v2.5.16</li>
                 </ul>
             </div>
         </section>
+        <section data-background-color="#ffffff">
+            <section>
+                <h2>Stars</h2>
+                <div id="star-chart-container"></div>
+            </section>
+            <section>
+                stars 2
+            </section>
+        </section>
     </div>
 </div>
+<script type="text/javascript" src="../node_modules/highcharts/highcharts.src.js"></script>
+<script type="text/javascript">
+    Highcharts.chart('star-chart-container', {
+        chart: {
+            type: 'spline',
+            backgroundColor: null,
+        },
+        title: {
+            text: ''
+        },
+        xAxis: {
+            type: 'datetime',
+            title: {
+                text: 'Date'
+            }
+        },
+        yAxis: {
+            title: {
+                text: 'Stars'
+            },
+            min: 2000
+        },
+
+        series: [
+            {
+                name: 'react',
+                data: [
+                ]
+            },
+            {
+                name: 'angular',
+                data: [
+                ]
+            },
+            {
+                name: 'Vue.JS',
+                data: [
+                    [Date.UTC(2014, 11, 1), 2610],
+                    [Date.UTC(2015, 7,  1), 5280],
+                    [Date.UTC(2015, 8, 27), 7950],
+                    [Date.UTC(2016, 0, 5), 10620],
+                    [Date.UTC(2016, 1,  24), 13290],
+                    [Date.UTC(2016, 3, 5), 15960],
+                    [Date.UTC(2016, 4, 19), 18630],
+                ]
+            },
+        ],
+    });
+</script>
+
 <script src="../node_modules/reveal.js/js/reveal.js"></script>
 <script>
     Reveal.initialize({
