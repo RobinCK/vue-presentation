@@ -1,4 +1,4 @@
-Highcharts.chart('bch-chart-container', {
+Highcharts.chart('create-rows-chart-container', {
   chart: {
     type: 'column',
     width: 900,
@@ -13,7 +13,6 @@ Highcharts.chart('bch-chart-container', {
     title: {
       text: ''
     }
-
   },
   legend: {
     enabled: false
@@ -35,17 +34,20 @@ Highcharts.chart('bch-chart-container', {
       data: [
         {
           name: 'React',
+          color: '#60dbfb',
           y: 187.6,
           label: '4.3',
         },
         {
           name: 'Angular',
+          color: '#de0032',
           y: 185.7,
           label: '7.8'
         },
         {
           name: 'Vue.JS',
           y: 169.2,
+          color: '#41b882',
           label: '3.6'
         }
       ]

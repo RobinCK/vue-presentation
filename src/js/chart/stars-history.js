@@ -21,10 +21,10 @@ Highcharts.chart('star-chart-container', {
   },
   plotOptions: {
     spline: {
-      lineWidth: 4,
+      lineWidth: 2,
       states: {
         hover: {
-          lineWidth: 3
+          lineWidth: 2
         }
       },
       marker: {
@@ -36,6 +36,7 @@ Highcharts.chart('star-chart-container', {
   series: [
     {
       name: 'react',
+      color: '#60dbfb',
       data: [
         [Date.UTC(2013, 10, 19), 2610],
         [Date.UTC(2014, 3, 24), 5280],
@@ -57,6 +58,7 @@ Highcharts.chart('star-chart-container', {
     },
     {
       name: 'angular',
+      color: '#de0032',
       data: [
         [Date.UTC(2015, 3, 22), 2280],
         [Date.UTC(2015, 8, 11), 4620],
@@ -77,6 +79,7 @@ Highcharts.chart('star-chart-container', {
     },
     {
       name: 'Vue.JS',
+      color: '#41b882',
       data: [
         [Date.UTC(2014, 11, 1), 2610],
         [Date.UTC(2015, 7,  1), 5280],
