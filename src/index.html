@@ -70,18 +70,76 @@
             <section>
                 <h2>Web Frameworks Benchmark</h2>
                 <h4>Round 7</h4>
+                <a href="http://www.stefankrause.net/js-frameworks-benchmark7/table.html">www.stefankrause.net</a>
+            </section>
+            <section>
+                <h2>Swap Rows</h2>
+                <h5>Time to swap 2 rows on a 1K table. (with 5 warmup iterations).</h5>
+                <div id="swap-rows-chart-container"></div>
+            </section>
+            <section>
+                <h2>Partial Update</h2>
+                <h5>Time to update the text of every 10th row (with 5 warmup iterations) for a table with 10k rows.</h5>
+                <div id="partial-update-chart-container"></div>
+            </section>
+            <section>
+                <h2>Remove Row</h2>
+                <h5>Duration to remove a row. (with 5 warmup iterations).</h5>
+                <div id="remove-row-chart-container"></div>
+            </section>
+            <section>
+                <h2>Select Row</h2>
+                <h5>Duration to highlight a row in response to a click on the row. (with 5 warmup iterations).</h5>
+                <div id="select-row-chart-container"></div>
+            </section>
+            <section>
+                <h2>Append Rows To Large Table</h2>
+                <h5>Duration for adding 1000 rows on a table of 10,000 rows.</h5>
+                <div id="append-rows-to-large-table-chart-container"></div>
             </section>
             <section>
                 <h2>Create Rows</h2>
                 <h5>Duration for creating 1000 rows after the page loaded.</h5>
-                <div id="bch-chart-container"></div>
+                <div id="create-rows-chart-container"></div>
+            </section>
+            <section>
+                <h2>Replace All Rows</h2>
+                <h5>Duration for updating all 1000 rows of the table (with 5 warmup iterations).</h5>
+                <div id="replace-all-rows-chart-container"></div>
+            </section>
+            <section>
+                <h2>Create Many Rows</h2>
+                <h5>Duration to create 10,000 rows</h5>
+                <div id="create-many-rows-chart-container"></div>
+            </section>
+            <section>
+                <h2>Clear Rows</h2>
+                <h5>Duration to clear the table filled with 10.000 rows.</h5>
+                <div id="clear-rows-chart-container"></div>
+            </section>
+            <section>
+                <h2>Startup Time</h2>
+                <h5>Time for loading, parsing and starting up</h5>
+                <div id="startup-time-chart-container"></div>
+            </section>
+            <section>
+                <h2>Memory allocation in MBs</h2>
             </section>
         </section>
     </div>
 </div>
 <script type="text/javascript" src="../node_modules/highcharts/highcharts.src.js"></script>
-<script type="text/javascript" src="js/star-chart.js"></script>
-<script type="text/javascript" src="js/create-rows-chart.js"></script>
+<script type="text/javascript" src="js/chart/stars-history.js"></script>
+<script type="text/javascript" src="js/chart/benchmark/append-rows-to-large-table.js"></script>
+<script type="text/javascript" src="js/chart/benchmark/clear-rows.js"></script>
+<script type="text/javascript" src="js/chart/benchmark/create-many-rows.js"></script>
+<script type="text/javascript" src="js/chart/benchmark/create-rows.js"></script>
+<script type="text/javascript" src="js/chart/benchmark/partial-update.js"></script>
+<script type="text/javascript" src="js/chart/benchmark/remove-row.js"></script>
+<script type="text/javascript" src="js/chart/benchmark/replace-all-rows.js"></script>
+<script type="text/javascript" src="js/chart/benchmark/select-row.js"></script>
+<script type="text/javascript" src="js/chart/benchmark/startup-time.js"></script>
+<script type="text/javascript" src="js/chart/benchmark/swap-rows.js"></script>
 <script src="../node_modules/reveal.js/js/reveal.js"></script>
 <script>
     Reveal.initialize({
