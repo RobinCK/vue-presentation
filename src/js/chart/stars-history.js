@@ -1,3 +1,5 @@
+import Highcharts from 'highcharts/highcharts';
+
 Highcharts.chart('star-chart-container', {
   chart: {
     type: 'spline',
@@ -5,33 +7,32 @@ Highcharts.chart('star-chart-container', {
     backgroundColor: null,
   },
   title: {
-    text: ''
+    text: '',
   },
   xAxis: {
     type: 'datetime',
     title: {
-      text: 'Date'
-    }
+      text: 'Date',
+    },
   },
   yAxis: {
     title: {
-      text: 'Stars'
+      text: 'Stars',
     },
-    min: 2000
+    min: 2000,
   },
   plotOptions: {
     spline: {
       lineWidth: 2,
       states: {
         hover: {
-          lineWidth: 2
-        }
+          lineWidth: 2,
+        },
       },
       marker: {
-        enabled: false
+        enabled: false,
       },
-      pointInterval: 3600000, // one hour
-    }
+    },
   },
   series: [
     {
@@ -40,9 +41,9 @@ Highcharts.chart('star-chart-container', {
       data: [
         [Date.UTC(2013, 10, 19), 2610],
         [Date.UTC(2014, 3, 24), 5280],
-        [Date.UTC(2014, 8,  1), 7950],
+        [Date.UTC(2014, 8, 1), 7950],
         [Date.UTC(2014, 11, 1), 10620],
-        [Date.UTC(2015, 1,  1), 13290],
+        [Date.UTC(2015, 1, 1), 13290],
         [Date.UTC(2015, 2, 3), 15960],
         [Date.UTC(2015, 3, 13), 18630],
         [Date.UTC(2015, 5, 3), 21270],
@@ -54,7 +55,7 @@ Highcharts.chart('star-chart-container', {
         [Date.UTC(2016, 3, 5), 37290],
         [Date.UTC(2016, 4, 20), 39960],
         [Date.UTC(2018, 3, 17), 93683],
-      ]
+      ],
     },
     {
       name: 'angular',
@@ -62,9 +63,9 @@ Highcharts.chart('star-chart-container', {
       data: [
         [Date.UTC(2015, 3, 22), 2280],
         [Date.UTC(2015, 8, 11), 4620],
-        [Date.UTC(2015, 11,  29), 6960],
+        [Date.UTC(2015, 11, 29), 6960],
         [Date.UTC(2016, 2, 28), 9330],
-        [Date.UTC(2016, 5,  9), 11670],
+        [Date.UTC(2016, 5, 9), 11670],
         [Date.UTC(2016, 7, 23), 14010],
         [Date.UTC(2016, 9, 20), 16350],
         [Date.UTC(2017, 0, 15), 18690],
@@ -75,17 +76,17 @@ Highcharts.chart('star-chart-container', {
         [Date.UTC(2017, 11, 11), 30420],
         [Date.UTC(2018, 1, 13), 32760],
         [Date.UTC(2018, 3, 16), 35100],
-      ]
+      ],
     },
     {
       name: 'Vue.JS',
       color: '#41b882',
       data: [
         [Date.UTC(2014, 11, 1), 2610],
-        [Date.UTC(2015, 7,  1), 5280],
+        [Date.UTC(2015, 7, 1), 5280],
         [Date.UTC(2015, 8, 27), 7950],
         [Date.UTC(2016, 0, 5), 10620],
-        [Date.UTC(2016, 1,  24), 13290],
+        [Date.UTC(2016, 1, 24), 13290],
         [Date.UTC(2016, 3, 5), 15960],
         [Date.UTC(2016, 4, 19), 18630],
         [Date.UTC(2016, 6, 15), 21270],
@@ -97,7 +98,7 @@ Highcharts.chart('star-chart-container', {
         [Date.UTC(2017, 0, 9), 37290],
         [Date.UTC(2017, 1, 6), 39960],
         [Date.UTC(2018, 3, 17), 91045],
-      ]
+      ],
     },
   ],
 });
