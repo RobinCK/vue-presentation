@@ -31,7 +31,7 @@ export default function generateChart(id, { react, angular, vue }) {
         borderWidth: 0,
         dataLabels: {
           enabled: true,
-          format: '{point.y:.1f} +/- {point.label}',
+          format: '{point.y:.1f}',
         },
       },
     },
@@ -44,19 +44,16 @@ export default function generateChart(id, { react, angular, vue }) {
             name: 'React',
             color: '#60dbfb',
             y: react,
-            label: '6.0',
           },
           {
             name: 'Angular',
             color: '#de0032',
             y: angular,
-            label: '16.4',
           },
           {
             name: 'Vue.JS',
             y: vue,
             color: '#41b882',
-            label: '11.4',
           },
         ],
       },
