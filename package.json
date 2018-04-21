@@ -2,7 +2,15 @@
   "name": "vue-presentation",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "src/main.js",
+  "files": [
+    "src"
+  ],
+  "keywords": [
+    "vuejs",
+    "vue",
+    "presentation"
+  ],
   "scripts": {
     "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
     "start": "npm run dev",
@@ -10,8 +18,18 @@
     "deploy": "gh-pages -d dist",
     "lint": "stylelint src/css/**/*.less -s less --color"
   },
-  "author": "",
-  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RobinCK/vue-presentation.git"
+  },
+  "author": "Igor Ognichenko <ognichenko.igor@gmail.com>",
+  "bugs": {
+    "url": "https://github.com/RobinCK/vue-presentation/issues"
+  },
+  "engines": {
+    "node": ">=6.11.5"
+  },
+  "license": "MIT",
   "dependencies": {
     "highcharts": "^6.1.0",
     "reveal.js": "^3.6.0"
