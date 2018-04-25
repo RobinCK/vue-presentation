@@ -349,6 +349,277 @@
                 <img src="static/images/reactivity.png" alt="">
             </section>
         </section>
+        <section>
+            <section>
+                <h2>Interpolations</h2>
+            </section>
+            <section data-background-color="#ffffff">
+                <h2>Text</h2>
+                <pre class="code"><code class="lang-html">
+&lt;span&gt;Message: {{ msg }}&lt;/span&gt;
+&lt;span v-once&gt;This will never change: {{ msg }}&lt;/span&gt;
+                </code></pre>
+            </section>
+            <section data-background-color="#ffffff">
+                <h2>Raw HTML</h2>
+                <pre class="code"><code class="lang-html">
+&lt;p&gt;Using mustaches: {{ rawHtml }}&lt;/p&gt;
+&lt;p&gt;Using v-html directive: &lt;span v-html="rawHtml"&gt;&lt;/span&gt;&lt;/p&gt;
+                </code></pre>
+            </section>
+            <section data-background-color="#ffffff">
+                <h2>Attributes</h2>
+                <pre class="code"><code class="lang-html">
+&lt;div v-bind:id="dynamicId"&gt;&lt;/div&gt;
+&lt;button v-bind:disabled="isButtonDisabled"&gt;Button&lt;/button&gt;
+                </code></pre>
+            </section>
+            <section data-background-color="#ffffff">
+                <h2>Using JavaScript Expressions</h2>
+                <pre class="code"><code class="lang-html">
+{{ number + 1 }}
+{{ ok ? 'YES' : 'NO' }}
+{{ message.split('').reverse().join('') }}
+&lt;div v-bind:id="'list-' + id"&gt;&lt;/div&gt;
+                </code></pre>
+            </section>
+        </section>
+        <section data-background-color="#ffffff">
+            <h2>Directives</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <h5>v-bind</h5>
+                    <pre class="code"><code class="lang-html">
+&lt;!-- full syntax --&gt;
+&lt;a v-bind:href="url"&gt;&lt;/a&gt;
+&lt;!-- shorthand --&gt;
+&lt;a :href="url"&gt;&lt;/a&gt;
+                    </code></pre>
+                </div>
+                <div class="col-md-6">
+                    <h5>v-on</h5>
+                    <pre class="code"><code class="lang-html">
+&lt;!-- full syntax --&gt;
+&lt;a v-on:click="doMethod"&gt;&lt;/a&gt;
+&lt;!-- shorthand --&gt;
+&lt;a @click="doMethod"&gt;&lt;/a&gt;
+                    </code></pre>
+                </div>
+            </div>
+            <h5>Modifiers</h5>
+            <pre class="code"><code class="lang-html">
+&lt;form v-on:submit.prevent="onSubmit"&gt; ... &lt;/form&gt;
+            </code></pre>
+        </section>
+        <section>
+            <section>
+                <h2>Computed Properties and Watchers</h2>
+            </section>
+            <section data-background-color="#ffffff">
+                <h2>Watch</h2>
+                <pre class="code"><code class="lang-javascript">
+var vm = new Vue({
+  el: '#demo',
+  data: {
+    firstName: 'Foo',
+    lastName: 'Bar',
+    fullName: 'Foo Bar'
+  },
+  watch: {
+    firstName: function (val) {
+      this.fullName = val + ' ' + this.lastName
+    },
+    lastName: function (val) {
+      this.fullName = this.firstName + ' ' + val
+    }
+  }
+})
+                </code></pre>
+            </section>
+            <section data-background-color="#ffffff">
+                <h2>Computed</h2>
+                <pre class="code"><code class="lang-html">
+&lt;div id="demo"&gt;{{ fullName }}&lt;/div&gt;
+                </code></pre>
+                <pre class="code"><code class="lang-javascript">
+var vm = new Vue({
+  el: '#demo',
+  data: {
+    firstName: 'Foo',
+    lastName: 'Bar'
+  },
+  computed: {
+    fullName: function () {
+      return this.firstName + ' ' + this.lastName
+    }
+  }
+})
+            </code></pre>
+            </section>
+            <section data-background-color="#ffffff">
+                <h2>Computed Setter</h2>
+                <pre class="code"><code class="lang-javascript">
+//...
+computed: {
+  fullName: {
+    // getter
+    get: function () {
+      return this.firstName + ' ' + this.lastName
+    },
+    // setter
+    set: function (newValue) {
+      var names = newValue.split(' ')
+      this.firstName = names[0]
+      this.lastName = names[names.length - 1]
+    }
+  }
+}
+//...
+            </code></pre>
+            </section>
+        </section>
+        <section data-background-color="#ffffff">
+            <h2>Binding HTML Classes</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <pre class="code"><code class="lang-html">
+&lt;div :class="{
+  'active': isActive,
+  'text-danger': HasError
+}"&gt;
+&lt;/div&gt;
+                    </code></pre>
+                </div>
+                <div class="col-md-6">
+                    <pre class="code"><code class="lang-javascript">
+//...
+data: {
+  isActive: true,
+  hasError: false
+}
+                    </code></pre>
+                </div>
+            </div>
+        </section>
+        <section data-background-color="#ffffff">
+            <h2>Conditional Rendering</h2>
+            <pre class="code"><code class="lang-html">
+&lt;div v-if=&quot;type === 'A'&quot;&gt;A&lt;/div&gt;
+&lt;div v-else-if=&quot;type === 'B'&quot;&gt;B&lt;/div&gt;
+&lt;div v-else-if=&quot;type === 'C'&quot;&gt;C&lt;/div&gt;
+&lt;div v-else&gt;Not A/B/C&lt;/div&gt;
+            </code></pre>
+        </section>
+        <section data-background-color="#ffffff">
+            <h2>Loops</h2>
+            <pre class="code"><code class="lang-html">
+&lt;ul id=&quot;example-1&quot;&gt;
+  &lt;li v-for=&quot;item in items&quot;&gt;{{ item.message }}&lt;/li&gt;
+&lt;/ul&gt;
+            </code></pre>
+
+            <pre class="code"><code class="lang-javascript">
+var example1 = new Vue({
+  el: '#example-1',
+  data: {
+    items: [
+      { message: 'Foo' },
+      { message: 'Bar' }
+    ]
+  }
+})
+            </code></pre>
+        </section>
+        <section data-background-color="#ffffff">
+            <h2>Method Event Handlers</h2>
+            <pre class="code"><code class="lang-html">
+&lt;div id=&quot;example-2&quot;&gt;
+  &lt;button v-on:click=&quot;greet&quot;&gt;Greet&lt;/button&gt;
+&lt;/div&gt;
+            </code></pre>
+
+            <pre class="code"><code class="lang-javascript">
+var example2 = new Vue({
+  el: '#example-2',
+  data: {
+    name: 'Vue.js'
+  },
+  methods: {
+    greet: function (event) {
+      // `this` inside methods points to the Vue instance
+    }
+  }
+})
+            </code></pre>
+        </section>
+        <section data-background-color="#ffffff">
+            <h2>Form Input Bindings</h2>
+            <pre class="code"><code class="lang-html">
+&lt;input v-model=&quot;message&quot; placeholder=&quot;edit me&quot;&gt;
+&lt;p&gt;Message is: {{ message }}&lt;/p&gt;
+            </code></pre>
+        </section>
+        <section data-background-color="#ffffff">
+            <h2>Event & Key Modifiers</h2>
+            <pre class="code"><code class="lang-html">
+&lt;!-- the click event's propagation will be stopped --&gt;
+&lt;a @click.stop=&quot;oThis&quot;&gt;&lt;/a&gt;
+&lt;!-- the submit event will no longer reload the page --&gt;
+&lt;form @submit.prevent=&quot;onSubmit&quot;&gt;&lt;/form&gt;
+&lt;!-- modifiers can be chained --&gt;
+&lt;a @click.stop.prevent=&quot;doThat&quot;&gt;&lt;/a&gt;
+&lt;!-- also available .tab, .delete, .esc, .space, ...--&gt;
+&lt;input @keyup.enter=&quot;submit&quot;&gt;
+            </code></pre>
+        </section>
+        <section data-background-color="#ffffff">
+            <h2>Component structure</h2>
+            <pre class="code"><code class="lang-javascript">
+export default {
+    name: 'RangeSlider',
+    mixins: [], // share common functionality with component mixins
+    extends: {}, // compose new components
+    props: {}, // component properties/variables
+    data() {}, // variables
+    computed: {},
+    components: {}, // when component uses other components
+    watch: {}, // watch wariables
+    methods: {}, // methods
+    // component Lifecycle hooks
+    beforeCreate() {},
+    created() {},
+    beforeMount() {},
+    mounted() {},
+    beforeUpdate() {},
+    updated() {},
+    activated() {},
+    deactivated() {},
+    beforeDestroy() {},
+    destroyed() {},
+    errorCaptured() {},
+};
+            </code></pre>
+        </section>
+        <section class="etc">
+            <h2>Etc...</h2>
+            <a class="etc__link" href="https://vuejs.org/v2/guide/">https://vuejs.org/v2/guide/</a>
+        </section>
+        <section>
+            <section>
+                <h2>What is Vuex?</h2>
+            </section>
+            <section data-background-color="#ffffff">
+                <h2>What is a "State Management Pattern"?</h2>
+                <img src="static/images/vuex.png" alt="">
+            </section>
+            <section data-background-color="#ffffff">
+                <h2>Shared state</h2>
+                <img style="height: 90vh;" src="static/images/vuex-shared.png" alt="">
+            </section>
+        </section>
+        <section>
+            <h2>Dev tools</h2>
+        </section>
     </div>
 </div>
 <!-- built files will be auto injected -->
