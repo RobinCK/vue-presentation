@@ -1620,7 +1620,7 @@ compression-webpack-plugin@^1.1.11:
 
 compression@^1.5.2:
   version "1.7.2"
-  resolved "http://registry.npmjs.org/compression/-/compression-1.7.2.tgz#aaffbcd6aaf854b44ebb280353d5ad1651f59a69"
+  resolved "https://registry.npmjs.org/compression/-/compression-1.7.2.tgz#aaffbcd6aaf854b44ebb280353d5ad1651f59a69"
   dependencies:
     accepts "~1.3.4"
     bytes "3.0.0"
@@ -5793,9 +5793,9 @@ ret@~0.1.10:
   version "0.1.15"
   resolved "https://registry.yarnpkg.com/ret/-/ret-0.1.15.tgz#b8a4825d5bdb1fc3f6f53c2bc33f81388681c7bc"
 
-reveal.js@^3.6.0:
-  version "3.6.0"
-  resolved "https://registry.yarnpkg.com/reveal.js/-/reveal.js-3.6.0.tgz#ce0e64f30cbebd6e5ce885c2f384085c5e5821e8"
+reveal.js@^4.3.0:
+  version "4.3.0"
+  resolved "https://registry.yarnpkg.com/reveal.js/-/reveal.js-4.3.0.tgz#6fe91cc84de2e286f039545cb596dbc4d0d52294"
 
 right-align@^0.1.1:
   version "0.1.3"
